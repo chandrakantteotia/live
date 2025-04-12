@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invite to Live Session</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Invite to Live Session</h2>
+    <input type="email" id="email" placeholder="Enter Gmail address" required />
+    <button onclick="sendInvite()">Send Invite</button>
+    <div id="message"></div>
+  </div>
+
+  <script src="invite.js"></script>
+</body>
+</html>
