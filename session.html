@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Session</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    video {
+      width: 300px;
+      height: 225px;
+      border: 1px solid #aaa;
+      margin: 10px;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🔴 Live Video Session</h2> 
+  <video id="localVideo" autoplay playsinline muted></video>
+   <video id="remoteVideo" autoplay playsinline></video>
+  <div id="status">🔄 Waiting for connection...</div> 
+  <audio id="connecting-sound" src="/phone-call-14472.mp3" preload="auto" loop></audio>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- <script> 
+  const firebaseConfig = { 
+
+    apiKey: "Ag0jrex2npsG3CnBp",
+    authDomain: "myedumate-live-session.firebaseapp.com",
+    databaseURL: "https://myedumate-live-session-default-rtdb.firebaseio.com", 
+    projectId: "myedumate-live-session", 
+    storageBucket: "myedumate-live-session.appspot.com", 
+    messagingSenderId: "YOUR_SENDER_ID", 
+    appId: "YOUR_APP_ID" 
+
+  }; 
+
+
+  firebase.initializeApp(firebaseConfig);
+  </script> -->
+  
+  <!-- Firebase SDKs -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script> -->
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDz508OfxJnaAeE9ON8W_xz7zkvvJkyqYw",
+    // apiKey: "Ag0jrex2npsG3CnBp",
+    authDomain: "myedumate-live-session.firebaseapp.com",
+    databaseURL: "https://myedumate-live-session-default-rtdb.firebaseio.com",
+    projectId: "myedumate-live-session",
+    storageBucket: "myedumate-live-session.firebasestorage.app",
+    messagingSenderId: "1024555546391",
+    appId: "1:1024555546391:web:e2d209c2336c47c65d6952",
+    measurementId: "G-R7SR1P2WF3"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <script src="webrtc.js"></script>
+</body>
+
+</html>
